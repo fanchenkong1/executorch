@@ -38,6 +38,7 @@ def define_cpuinfo_and_clog():
             "cpuinfo-wrappers/x86/uarch.c",
             "cpuinfo-wrappers/x86/vendor.c",
             "cpuinfo-wrappers/x86/windows/init.c",
+            "cpuinfo-wrappers/emscripten/init.c",
         ],
         include_directories = ["cpuinfo/src"],
         public_include_directories = ["cpuinfo/include"],

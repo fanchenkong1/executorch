@@ -1,0 +1,29 @@
+diff --git a/src/init.c b/src/init.c
+index 81d5721..3300f5e 100644
+--- a/src/init.c
++++ b/src/init.c
+@@ -49,15 +49,15 @@ bool CPUINFO_ABI cpuinfo_initialize(void) {
+ #else
+ 	cpuinfo_log_error("operating system is not supported in cpuinfo");
+ #endif
+-#elif CPUINFO_ARCH_ASMJS || CPUINFO_ARCH_WASM || CPUINFO_ARCH_WASMSIMD
+-#if defined(__EMSCRIPTEN_PTHREADS__)
+-	pthread_once(&init_guard, &cpuinfo_emscripten_init);
+-#else
+-	if (!init_guard) {
+-		cpuinfo_emscripten_init();
+-	}
+-	init_guard = true;
+-#endif
++// #elif CPUINFO_ARCH_ASMJS || CPUINFO_ARCH_WASM || CPUINFO_ARCH_WASMSIMD
++// #if defined(__EMSCRIPTEN_PTHREADS__)
++// 	pthread_once(&init_guard, &cpuinfo_emscripten_init);
++// #else
++// 	if (!init_guard) {
++// 		cpuinfo_emscripten_init();
++// 	}
++// 	init_guard = true;
++// #endif
+ #else
+ 	cpuinfo_log_error("processor architecture is not supported in cpuinfo");
+ #endif

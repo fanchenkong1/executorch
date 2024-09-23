@@ -66,7 +66,11 @@ CPUINFO_SOURCES = {
     ],
     "(defined(__arm__) || defined(__aarch64__)) && defined(TARGET_OS_MAC) && TARGET_OS_MAC": [
         "arm/mach/init.c",
-    ],}
+    ],
+    "defined(__EMSCRIPTEN__)": [
+        "emscripten/init.c",
+    ],
+}
 
 
 if __name__ == "__main__":

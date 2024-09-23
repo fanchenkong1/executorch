@@ -43,6 +43,9 @@ WRAPPER_SRC_NAMES = {
     "PROD_AVXVNNI_MICROKERNEL_SRCS": "defined(__i386__) || defined(__i686__) || defined(__x86_64__)",
     "AARCH32_ASM_MICROKERNEL_SRCS": "defined(__arm__)",
     "AARCH64_ASM_MICROKERNEL_SRCS": "defined(__aarch64__)",
+    "PROD_WASM_MICROKERNEL_SRCS": "defined(__EMSCRIPTEN__)",
+    "PROD_WASMSIMD_MICROKERNEL_SRCS": "defined(__EMSCRIPTEN__)",
+    "PROD_WASMRELAXEDSIMD_MICROKERNEL_SRCS": "defined(__EMSCRIPTEN__)",
 
     # add non-prod microkernel sources here:
 }
@@ -88,6 +91,9 @@ SRC_NAMES = {
     "PROD_AVXVNNI_MICROKERNEL_SRCS",
     "AARCH32_ASM_MICROKERNEL_SRCS",
     "AARCH64_ASM_MICROKERNEL_SRCS",
+    "PROD_WASM_MICROKERNEL_SRCS",
+    "PROD_WASMSIMD_MICROKERNEL_SRCS",
+    "PROD_WASMRELAXEDSIMD_MICROKERNEL_SRCS",
 
     # add non-prod microkernel sources here:
 }

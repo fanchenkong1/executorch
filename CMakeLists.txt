@@ -357,7 +357,11 @@ include(${EXECUTORCH_SRCS_FILE})
 # We can then use various cross-compilation hints to set the default value of
 # EXECUTORCH_BUILD_HOST_TARGETS, which can still be overridden if desired.
 #
-
+# Wasm flags
+if (CMAKE_TOOLCHAIN_FILE MATCHES ".*Emscripten\.cmake$")
+       string(APPEND CMAKE_C_FLAGS " -v -msimd128 -mrelaxed-simd -g2 -s NODERAWFS=1 -s INITIAL_MEMORY=3gb")
+       string(APPEND CMAKE_CXX_FLAGS " -v -msimd128 -mrelaxed-simd -g2 -s NODERAWFS=1 -s INITIAL_MEMORY=3gb")
+endif()
 # Detect if an iOS toolchain is set.
 if(CMAKE_TOOLCHAIN_FILE MATCHES ".*(iOS|ios\.toolchain)\.cmake$")
   set(CMAKE_TOOLCHAIN_IOS ON)

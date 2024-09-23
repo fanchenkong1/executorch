@@ -7,7 +7,6 @@ PROD_SCALAR_MICROKERNEL_SRCS = [
 ]
 
 PROD_FMA_MICROKERNEL_SRCS = [
-    "xnnpack_wrappers/amalgam/gen/fma.c",
 ]
 
 PROD_ARMSIMD32_MICROKERNEL_SRCS = [
@@ -114,12 +113,12 @@ PROD_AVX512VBMI_MICROKERNEL_SRCS = [
     "xnnpack_wrappers/amalgam/gen/avx512vbmi.c",
 ]
 
-PROD_AVX512VNNIGFNI_MICROKERNEL_SRCS = [
-    "xnnpack_wrappers/amalgam/gen/avx512vnnigfni.c",
-]
-
 PROD_AVX512VNNI_MICROKERNEL_SRCS = [
     "xnnpack_wrappers/amalgam/gen/avx512vnni.c",
+]
+
+PROD_AVX512VNNIGFNI_MICROKERNEL_SRCS = [
+    "xnnpack_wrappers/amalgam/gen/avx512vnnigfni.c",
 ]
 
 PROD_RVV_MICROKERNEL_SRCS = [
@@ -458,4 +457,16 @@ AARCH64_ASM_MICROKERNEL_SRCS = [
     "xnnpack_wrappers/qu8-igemm/gen/qu8-igemm-4x16-minmax-rndnu-asm-aarch64-neon-mlal-lane-cortex-a75.S",
     "xnnpack_wrappers/qu8-igemm/gen/qu8-igemm-4x16-minmax-rndnu-asm-aarch64-neon-mlal-lane-ld64-prfm.S",
     "xnnpack_wrappers/qu8-igemm/gen/qu8-igemm-4x16-minmax-rndnu-asm-aarch64-neon-mlal-lane-ld64.S",
+]
+
+PROD_WASM_MICROKERNEL_SRCS = [
+    "xnnpack_wrappers/amalgam/gen/wasm.c",
+]
+
+PROD_WASMSIMD_MICROKERNEL_SRCS = [
+    "xnnpack_wrappers/amalgam/gen/wasmsimd.c",
+]
+
+PROD_WASMRELAXEDSIMD_MICROKERNEL_SRCS = [
+    "xnnpack_wrappers/amalgam/gen/wasmrelaxedsimd.c",
 ]
